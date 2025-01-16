@@ -1,7 +1,10 @@
-import HelloWorld from "./button";
-
+import Header from "./components/Header";
 function App() {
-  return <HelloWorld></HelloWorld>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default App;

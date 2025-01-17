@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div className="mt-8 flex justify-center gap-8">
+      <div className="mt-8 flex justify-center gap-8 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <TemperatureCard temperature={25} />
         <FeelsLikeCard feelsLike={25} />
       </div>

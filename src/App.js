@@ -14,7 +14,7 @@ function App() {
           <div className="mt-8 flex justify-center gap-">
             <TemperatureCard temperature={25} />
             <FeelsLikeCard feelsLike={25} />
-            <HumidityCard />
+            <HumidityCard humidity={90} />
           </div>
         </div>{" "}
       </div>

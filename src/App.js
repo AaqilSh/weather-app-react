@@ -7,11 +7,13 @@ import HumidityCard from "./components/HumidityCard";
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-500">
-      <Header />
-      <SearchBar />
+      <Header className="mb-6 px-4" />
+      <SearchBar className="flex justify-center mb-6 px-4">
+        <SearchBar />
+      </SearchBar>
       <div class="grid ">
         <div class="grid">
-          <div className="mt-8 flex justify-center gap-">
+          <div className="mt-8 flex justify-center gap-8">
             <TemperatureCard temperature={25} />
             <FeelsLikeCard feelsLike={25} />
             <HumidityCard humidity={90} />

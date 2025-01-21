@@ -3,7 +3,7 @@ import TemperatureCard from "./components/TemperatureCard";
 import FeelsLikeCard from "./components/FeelsLikeCard";
 import SearchBar from "./components/SearchBar";
 import HumidityCard from "./components/HumidityCard";
-
+import WindSpeedCard from "./components/WindSpeedCard";
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-500">
@@ -17,6 +17,7 @@ function App() {
             <TemperatureCard temperature={25} />
             <FeelsLikeCard feelsLike={25} />
             <HumidityCard humidity={90} />
+            <WindSpeedCard windSpeed={15} />
           </div>
         </div>{" "}
       </div>

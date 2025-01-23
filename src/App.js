@@ -4,6 +4,8 @@ import FeelsLikeCard from "./components/FeelsLikeCard";
 import SearchBar from "./components/SearchBar";
 import HumidityCard from "./components/HumidityCard";
 import WindSpeedCard from "./components/WindSpeedCard";
+import UVIndexCard from "./components/UvIndexCard";
+
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-500">
@@ -18,6 +20,7 @@ function App() {
             <FeelsLikeCard feelsLike={25} />
             <HumidityCard humidity={90} />
             <WindSpeedCard windSpeed={15} />
+            <UVIndexCard uvIndex={0} />
           </div>
         </div>{" "}
       </div>

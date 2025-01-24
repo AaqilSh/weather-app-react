@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 import HumidityCard from "./components/HumidityCard";
 import WindSpeedCard from "./components/WindSpeedCard";
 import UVIndexCard from "./components/UvIndexCard";
+import SunriseSunsetCard from "./components/SunriseSunsetCard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <HumidityCard humidity={90} />
             <WindSpeedCard windSpeed={15} />
             <UVIndexCard uvIndex={0} />
+            <SunriseSunsetCard />
           </div>
         </div>{" "}
       </div>

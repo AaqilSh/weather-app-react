@@ -16,15 +16,17 @@ function App() {
       </SearchBar>
       <div class="grid ">
         <div class="grid">
-          <div className="mt-8 flex justify-center gap-8">
-            <TemperatureCard temperature={25} />
-            <FeelsLikeCard feelsLike={25} />
-            <HumidityCard humidity={90} />
-            <WindSpeedCard windSpeed={15} />
-            <UVIndexCard uvIndex={0} />
-            <SunriseSunsetCard sunrise={5} sunset={10} />
+          <div className="px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+              <TemperatureCard temperature={25} />
+              <FeelsLikeCard feelsLike={25} />
+              <HumidityCard humidity={90} />
+              <WindSpeedCard windSpeed={15} />
+              <UVIndexCard uvIndex={0} />
+              <SunriseSunsetCard sunrise={5} sunset={10} />
+            </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

@@ -2,21 +2,20 @@ import React from "react";
 
 const SunriseSunsetCard = ({ sunrise, sunset }) => {
   return (
-    <div className="w-60 bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 flex flex-col items-center justify-center text-gray-900 dark:text-gray-100 transition-all duration-500">
-      <div className="text-xl font-semibold mb-4">🌞 Sunrise & Sunset</div>
-      <div className="flex justify-between w-full text-center">
-        <div className="flex flex-col items-center">
-          <div className="text-4xl mb-2">🌅</div>
-          <p className="text-sm font-medium">Sunrise</p>
-          <p className="text-lg">{sunrise}</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="text-4xl mb-2">🌇</div>
-          <p className="text-sm font-medium">Sunset</p>
-          <p className="text-lg">{sunset}</p>
-        </div>
-      </div>
-    </div>
+	<div className="bg-yellow-400 text-white p-6 rounded-lg shadow-lg flex flex-col items-center w-80">
+	<div className="text-5xl">🌅</div>
+	<h2 className="text-xl font-bold mt-4">Sunrise & Sunset</h2>
+	<div className="flex justify-between items-center w-full mt-4">
+	  <div className="flex flex-col items-center">
+		<p className="text-lg font-semibold">Sunrise</p>
+		<p className="text-2xl">{sunrise}</p>
+	  </div>
+	  <div className="flex flex-col items-center">
+		<p className="text-lg font-semibold">Sunset</p>
+		<p className="text-2xl">{sunset}</p>
+	  </div>
+	</div>
+  </div>
   );
 };
 

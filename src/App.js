@@ -22,7 +22,7 @@ function App() {
             <HumidityCard humidity={90} />
             <WindSpeedCard windSpeed={15} />
             <UVIndexCard uvIndex={0} />
-            <SunriseSunsetCard />
+            <SunriseSunsetCard sunrise={5} sunset={10} />
           </div>
         </div>{" "}
       </div>

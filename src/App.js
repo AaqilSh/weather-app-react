@@ -6,6 +6,7 @@ import HumidityCard from "./components/HumidityCard";
 import WindSpeedCard from "./components/WindSpeedCard";
 import UVIndexCard from "./components/UvIndexCard";
 import SunriseSunsetCard from "./components/SunriseSunsetCard";
+import AirQualityCard from "./components/AirQualityCard";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <WindSpeedCard windSpeed={15} />
               <UVIndexCard uvIndex={0} />
               <SunriseSunsetCard sunrise={5} sunset={10} />
+              <AirQualityCard />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ function App() {
               <WindSpeedCard windSpeed={15} />
               <UVIndexCard uvIndex={0} />
               <SunriseSunsetCard sunrise={5} sunset={10} />
-              <AirQualityCard />
+              <AirQualityCard aqi={50} />
             </div>
           </div>
         </div>

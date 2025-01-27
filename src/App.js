@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-500">
       <Header className="mb-6 px-4" />
-      <SearchBar className="flex justify-center mb-6 px-4">
+      <div className="flex justify-center px-4 mt-4 mb-4">
         <SearchBar />
-      </SearchBar>
+      </div>
       <div class="grid ">
         <div class="grid">
           <div className="px-4">

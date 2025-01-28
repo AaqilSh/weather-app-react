@@ -14,10 +14,10 @@ const Header = () => {
 		}
 	  };
   return (
-    <header className="relative bg-blue-600 text-white px-6 py-4 flex items-center">
-	<h1 className="absolute inset-x-0 text-center text-2xl font-bold font-fredoka">Weathora 🌞</h1>
+    <header className="relative bg-blue-600 text-white px-6 py-4 flex items-center justify-between">
+	<h1 className="text-2xl font-bold font-fredoka text-center w-full">Weathora 🌞</h1>
       <button onClick={toggleTheme} 
-	  className="ml-auto bg-white text-green-600 px-4 py-2 rounded-md shadow-md hover:bg-gray-200">
+	  className="absolute right-6 bg-white text-green-600 px-4 py-2 rounded-md shadow-md hover:bg-gray-200 transition-all duration-300">
         🌞 Toggle Theme
       </button>
     </header>

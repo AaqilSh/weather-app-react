@@ -16,7 +16,7 @@ function App() {
         <SearchBar />
       </div>
       <div class="px-6 mt-8 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center pb-8">
           <TemperatureCard temperature={25} />
           <FeelsLikeCard feelsLike={25} />
           <HumidityCard humidity={90} />

@@ -2,7 +2,7 @@ import React from "react";
 
 const SunriseSunsetCard = ({ sunrise, sunset }) => {
   return (
-	<div className="bg-yellow-400 text-white p-6 rounded-lg shadow-lg flex flex-col items-center w-80">
+	<div className="bg-yellow-400 text-white p-6 rounded-lg shadow-lg flex flex-col items-center w-96 max-w-sm">
 	<div className="text-5xl">🌅</div>
 	<h2 className="text-xl font-bold mt-4">Sunrise & Sunset</h2>
 	<div className="flex justify-between items-center w-full mt-4">

@@ -22,7 +22,7 @@ const AirQualityCard = ({ aqi }) => {
 
   return (
     <div
-      className={`p-6 rounded-lg shadow-lg text-white flex flex-col items-center w-80 ${color}`}
+      className={`p-6 rounded-lg shadow-lg text-white flex flex-col items-center w-96 max-w-sm ${color}`}
     >
       <div className="text-5xl">{emoji}</div>
       <h2 className="text-xl font-bold mt-4">Air Quality Index</h2>

@@ -20,7 +20,7 @@ function App() {
           <TemperatureCard temperature={25} />
           <FeelsLikeCard feelsLike={25} />
           <HumidityCard humidity={90} />
-          <WindSpeedCard windSpeed={15} />
+          <WindSpeedCard windSpeed={20} />
           <UVIndexCard uvIndex={0} />
           <SunriseSunsetCard sunrise={5} sunset={10} />
           <AirQualityCard aqi={50} />

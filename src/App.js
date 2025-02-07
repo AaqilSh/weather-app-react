@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { getWeatherData } from "./services/weather.service";
 import Header from "./components/Header";
 import TemperatureCard from "./components/TemperatureCard";
 import FeelsLikeCard from "./components/FeelsLikeCard";

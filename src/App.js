@@ -11,21 +11,37 @@ import SunriseSunsetCard from "./components/SunriseSunsetCard";
 import AirQualityCard from "./components/AirQualityCard";
 
 function App() {
+  const [weather, setWeather] = useState(null);
+  const [city, setCity] = useState("London");
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      const data = await getWeatherData(city);
+      if (data) {
+        setWeather(data);
+      }
+    };
+    fetchWeather();
+  }, [city]);
+
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-500">
       <Header className="mb-6 px-4" />
       <div className="justify-center px-4 mt-4 mb-4">
-        <SearchBar />
+        <SearchBar onSearch={setCity} />
       </div>
       <div class="px-6 mt-8 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center pb-8">
-          <TemperatureCard temperature={25} />
-          <FeelsLikeCard feelsLike={25} />
-          <HumidityCard humidity={90} />
-          <WindSpeedCard windSpeed={20} />
-          <UVIndexCard uvIndex={0} />
-          <SunriseSunsetCard sunrise={5} sunset={10} />
-          <AirQualityCard aqi={50} />
+          <TemperatureCard temperature={weather?.temperature || "Loading.."} />
+          <FeelsLikeCard feelsLike={weather?.feelsLike || "Loading.."} />
+          <HumidityCard humidity={weather?.humidity || "Loading.."} />
+          <WindSpeedCard windSpeed={weather?.windSpeed || "Loading.."} />
+          <UVIndexCard uvIndex={weather?.uvIndex || "Loading.."} />
+          <SunriseSunsetCard
+            sunrise={weather?.sunrise || "Loading.."}
+            sunset={weather?.sunrise || "Loading.."}
+          />
+          <AirQualityCard aqi={weather?.AirQuality || "Loading.."} />
         </div>
       </div>
     </div>

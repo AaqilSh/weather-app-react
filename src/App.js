@@ -39,7 +39,7 @@ function App() {
           <UVIndexCard uvIndex={weather?.uvIndex || "Loading.."} />
           <SunriseSunsetCard
             sunrise={weather?.sunrise || "Loading.."}
-            sunset={weather?.sunrise || "Loading.."}
+            sunset={weather?.sunset || "Loading.."}
           />
           <AirQualityCard aqi={weather?.AirQuality || "Loading.."} />
         </div>

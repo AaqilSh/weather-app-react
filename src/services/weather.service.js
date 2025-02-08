@@ -14,7 +14,7 @@ export const getWeatherData = async (city) => {
 
     // Step 2: Fetch weather data using latitude & longitude
     const weatherResponse = await fetch(
-      `${WEATHER_API_URL}?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`
+      `${WEATHER_API_URL}?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m&daily=sunrise,sunset&timezone=auto`
     );
 
     if (!weatherResponse.ok) {
@@ -24,7 +24,9 @@ export const getWeatherData = async (city) => {
     const weatherData = await weatherResponse.json();
 
     return {
-      temperature: weatherData.hourly.temperature_2m[0], // Gets the latest hourly temperature
+      temperature: weatherData.hourly.temperature_2m[0],
+      sunrise: weatherData.daily.sunrise[0],
+      sunset: weatherData.daily.sunset[0],
     };
   } catch (error) {
     console.error("Error fetching weather data:", error);

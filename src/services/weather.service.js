@@ -12,7 +12,6 @@ export const getWeatherData = async (city) => {
 
     const { latitude, longitude } = geoData.results[0];
 
-    // Step 2: Fetch weather data using latitude & longitude
     const weatherResponse = await fetch(
       `${WEATHER_API_URL}?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m&daily=sunrise,sunset&timezone=auto`
     );

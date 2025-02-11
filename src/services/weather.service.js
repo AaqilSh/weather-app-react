@@ -26,6 +26,7 @@ export const getWeatherData = async (city) => {
       temperature: weatherData.hourly.temperature_2m[0],
       sunrise: weatherData.daily.sunrise[0],
       sunset: weatherData.daily.sunset[0],
+      uvIndex: weatherData.daily.uv_index_max[0],
     };
   } catch (error) {
     console.error("Error fetching weather data:", error);

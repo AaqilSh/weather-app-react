@@ -24,6 +24,7 @@ export const getWeatherData = async (city) => {
 
     return {
       temperature: weatherData.hourly.temperature_2m[0],
+      humidity: weatherData.hourly.relative_humudity_2m[0],
       sunrise: weatherData.daily.sunrise[0],
       sunset: weatherData.daily.sunset[0],
       uvIndex: weatherData.daily.uv_index_max[0],

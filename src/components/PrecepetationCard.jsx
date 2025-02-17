@@ -1,6 +1,6 @@
 import React from "react";
 
-const AirQualityCard = ({ aqi }) => {
+const PrecepetationCard = ({ aqi }) => {
   // Determine the AQI category and corresponding emoji
   const getAqiDetails = (aqi) => {
     if (aqi <= 50) {
@@ -32,4 +32,4 @@ const AirQualityCard = ({ aqi }) => {
   );
 };
 
-export default AirQualityCard;
+export default PrecepetationCard;

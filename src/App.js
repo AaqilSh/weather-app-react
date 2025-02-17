@@ -8,7 +8,7 @@ import HumidityCard from "./components/HumidityCard";
 import WindSpeedCard from "./components/WindSpeedCard";
 import UVIndexCard from "./components/UvIndexCard";
 import SunriseSunsetCard from "./components/SunriseSunsetCard";
-import AirQualityCard from "./components/AirQualityCard";
+import AirQualityCard from "./components/PrecepetationCard";
 
 function App() {
   const [weather, setWeather] = useState(null);

@@ -8,7 +8,7 @@ import HumidityCard from "./components/HumidityCard";
 import WindSpeedCard from "./components/WindSpeedCard";
 import UVIndexCard from "./components/UvIndexCard";
 import SunriseSunsetCard from "./components/SunriseSunsetCard";
-import PrecepetationCard from "./components/PrecepetationCard";
+import PrecipitationCard from "./components/PrecepetationCard";
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -41,7 +41,9 @@ function App() {
             sunrise={weather?.sunrise || "Loading.."}
             sunset={weather?.sunset || "Loading.."}
           />
-          <PrecepetationCard aqi={weather?.AirQuality || "Loading.."} />
+          <PrecipitationCard
+            precipitation={weather?.precipitation || "Loading.."}
+          />
         </div>
       </div>
     </div>

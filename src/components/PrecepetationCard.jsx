@@ -1,35 +1,31 @@
 import React from "react";
 
-const PrecepetationCard = ({ aqi }) => {
-  // Determine the AQI category and corresponding emoji
-  const getAqiDetails = (aqi) => {
-    if (aqi <= 50) {
-      return { status: "Good", emoji: "🌿", color: "bg-green-500" };
-    } else if (aqi <= 100) {
-      return { status: "Moderate", emoji: "🌤️", color: "bg-yellow-500" };
-    } else if (aqi <= 150) {
-      return { status: "Unhealthy for Sensitive Groups", emoji: "😷", color: "bg-orange-500" };
-    } else if (aqi <= 200) {
-      return { status: "Unhealthy", emoji: "🌫️", color: "bg-red-500" };
-    } else if (aqi <= 300) {
-      return { status: "Very Unhealthy", emoji: "☠️", color: "bg-purple-500" };
+const PrecipitationCard = ({ precipitation }) => {
+  // Determine precipitation intensity
+  const getPrecipitationDetails = (precipitation) => {
+    if (precipitation === 0) {
+      return { status: "No Rain", emoji: "☀️", color: "bg-blue-400" };
+    } else if (precipitation < 2.5) {
+      return { status: "Light Rain", emoji: "🌦️", color: "bg-blue-500" };
+    } else if (precipitation < 7.5) {
+      return { status: "Moderate Rain", emoji: "🌧️", color: "bg-blue-600" };
     } else {
-      return { status: "Hazardous", emoji: "💀", color: "bg-maroon-500" };
+      return { status: "Heavy Rain", emoji: "⛈️", color: "bg-blue-700" };
     }
   };
 
-  const { status, emoji, color } = getAqiDetails(aqi);
+  const { status, emoji, color } = getPrecipitationDetails(precipitation);
 
   return (
     <div
       className={`p-6 rounded-lg shadow-lg text-white flex flex-col items-center w-96 max-w-sm ${color}`}
     >
       <div className="text-5xl">{emoji}</div>
-      <h2 className="text-xl font-bold mt-4">Air Quality Index</h2>
-      <p className="text-3xl font-semibold mt-2">{aqi}</p>
+      <h2 className="text-xl font-bold mt-4">Precipitation</h2>
+      <p className="text-3xl font-semibold mt-2">{precipitation} mm</p>
       <p className="text-lg mt-2">{status}</p>
     </div>
   );
 };
 
-export default PrecepetationCard;
+export default PrecipitationCard;

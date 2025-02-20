@@ -30,7 +30,7 @@ export const getWeatherData = async (city) => {
       sunset: weatherData.daily.sunset[0],
       uvIndex: weatherData.daily.uv_index_max[0],
       windSpeed: weatherData.current.wind_speed_10m,
-      feelsLike: weatherData.current.apparent_temperature,
+      feelsLike: Math.round(weatherData.current.apparent_temperature),
     };
   } catch (error) {
     console.error("Error fetching weather data:", error);

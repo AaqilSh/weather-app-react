@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
             placeholder="Enter city name"
             value={city}
             onChange={(e) => setCity(e.target.value)}
-            className="px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-80 sm:w-96 px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             type="submit"

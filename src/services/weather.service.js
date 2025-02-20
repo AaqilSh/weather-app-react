@@ -23,7 +23,7 @@ export const getWeatherData = async (city) => {
     const weatherData = await weatherResponse.json();
 
     return {
-      temperature: weatherData.hourly.temperature_2m[0],
+      temperature: Math.round(weatherData.hourly.temperature_2m[0]),
       humidity: weatherData.hourly.relative_humidity_2m[0],
       precipitation: weatherData.hourly.precipitation[0],
       sunrise: weatherData.daily.sunrise[0],

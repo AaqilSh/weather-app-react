@@ -13,7 +13,7 @@ export const getWeatherData = async (city) => {
     const { latitude, longitude } = geoData.results[0];
 
     const weatherResponse = await fetch(
-      `${WEATHER_API_URL}?latitude=${latitude}&longitude=${longitude}&current=wind_speed_10m,apparent_temperature&hourly=temperature_2m,relative_humidity_2m,precipitation&daily=sunrise,sunset,uv_index_max`
+      `${WEATHER_API_URL}?latitude=${latitude}&longitude=${longitude}&current=wind_speed_10m,apparent_temperature&hourly=temperature_2m,relative_humidity_2m,precipitation_probability&daily=sunrise,sunset,uv_index_max`
     );
 
     if (!weatherResponse.ok) {
@@ -25,7 +25,7 @@ export const getWeatherData = async (city) => {
     return {
       temperature: Math.round(weatherData.hourly.temperature_2m[0]),
       humidity: weatherData.hourly.relative_humidity_2m[0],
-      precipitation: weatherData.hourly.precipitation[0],
+      precipitation: weatherData.hourly.precipitation_probability[0],
       sunrise: weatherData.daily.sunrise[0],
       sunset: weatherData.daily.sunset[0],
       uvIndex: weatherData.daily.uv_index_max[0],

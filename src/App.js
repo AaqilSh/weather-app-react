@@ -36,7 +36,7 @@ function App() {
           <FeelsLikeCard feelsLike={weather?.feelsLike || "Loading.."} />
           <HumidityCard humidity={weather?.humidity || "Loading.."} />
           <WindSpeedCard windSpeed={weather?.windSpeed || "Failed to Load"} />
-          <UVIndexCard uvIndex={weather?.uvIndex || "Failed to Load"} />
+          <UVIndexCard uvIndex={weather?.uvIndex || "Loading"} />
           <SunriseSunsetCard
             sunrise={weather?.sunrise || "Loading.."}
             sunset={weather?.sunset || "Loading.."}

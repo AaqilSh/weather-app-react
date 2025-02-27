@@ -33,7 +33,7 @@
 }
 
 .rainy {
-  background: url("/assets/rainy.jpg") no-repeat center center fixed;
+  background: url("/assets/rainy.gif") no-repeat center center fixed;
   background-size: cover;
 }
 

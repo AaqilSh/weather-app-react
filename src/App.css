@@ -28,24 +28,24 @@
   color: #61dafb;
 }
 .sunny {
-  background: url("/assets/sunny.jpg") no-repeat center center fixed;
+  background: url("assets/sunny.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .rainy {
-  background: url("/assets/rainy.gif") no-repeat center center fixed;
+  background: url("assets/rainy.gif") no-repeat center center fixed;
   background-size: cover;
 }
 
 .cloudy {
-  background: url("/assets/cloudy.jpg") no-repeat center center fixed;
+  background: url("assets/cloudy.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-.snowy {
+/* .snowy {
   background: url("/assets/snowy.jpg") no-repeat center center fixed;
   background-size: cover;
-}
+} */
 
 @keyframes App-logo-spin {
   from {
